@@ -1,0 +1,293 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(80, 12, 4);
+  background-image: url('bg.png'), url('main-bg.jpg');
+  background-position: center center, center center;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.header {
+  background: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main {
+  background-color: #fefefe4f;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center; /* Center-align content within .main */
+}
+
+.form-container {
+  display: flex;
+  justify-content: center; /* Center-align child elements horizontally */
+  align-items: center;
+  gap: 10px;
+}
+
+.piggybank {
+  color: #ccc;
+}
+
+.logo {
+  height: 40px; /* Adjust the height as needed */
+  margin-right: 10px; /* Add some spacing between the logo and the text */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.centered-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 30px; /* Increased padding for a bigger alert box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased box shadow for depth */
+  z-index: 9999;
+  border-radius: 20px;
+  max-width: 400px; /* Max width to limit the size */
+  width: 100%; /* Full width */
+  text-align: center; /* Center the text */
+  font-size: 16px; /* Adjust font size */
+  line-height: 1.5; /* Adjust line height */
+}
+
+/* Style for the tax bolt icon */
+.tax-bolt-icon {
+  color: #ff0000; /* Red color for the bolt */
+  font-size: 36px; /* Increased font size for the bolt icon */
+  margin-bottom: 20px; /* Space below the icon */
+}
+
+.pressed {
+  background-color: #e0e0e0; /* A slightly darker background color */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -2px 4px rgba(0, 0, 0, 0.15); /* Inset shadow to create a pressed effect */
+  transform: translateY(2px); /* Slight vertical movement to enhance the pressed effect */
+}
+
+.form-container input[type="number"] {
+  width: 400px;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+}
+
+.form-container button {
+  background-color: #fefefe;
+  color: #303030;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stakeBtn,
+.unstakeBtn {
+  width: 100%; /* Full width for small screens */
+  display: block; /* Block-level elements by default */
+  margin-bottom: 10px; /* Add some spacing between buttons */
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Add some vertical spacing between input and button */
+}
+
+.inputArea {
+  width: 40%;
+  max-width: 200px; /* Set a maximum width for the input */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.maxBtn {
+  width: 60%;
+  max-width: 260px; /* Set a maximum width for the button */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .input-container {
+    flex-direction: row; /* Change to horizontal layout for larger screens */
+    align-items: center; /* Center items vertically in the row */
+  }
+
+  .inputArea {
+    flex: 1; /* Allow the input area to grow and take remaining space */
+    max-width: none; /* Remove max-width for input on larger screens */
+    margin-right: 10px; /* Add some space between input and button */
+  }
+
+  .maxBtn {
+    max-width: 150px; /* Limit the width of the button on larger screens */
+    width: auto; /* Let button size adjust based on content */
+  }
+}
+
+.info-section {
+  margin-top: 20px;
+  color: #fefefe;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-left p {
+  margin: 5px 0;
+}
+
+.info-right p {
+  margin: 5px 0;
+  text-align: right;
+}
+
+.claimBtn {
+  margin-top: 20px;
+}
+
+.claimBtn button {
+  background-color: #fefefe;
+  color: #303030;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer {
+  text-align: center;
+  color: #ffffff;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .stakeBtn,
+  .unstakeBtn {
+    width: 150px; /* Set the desired width for larger screens */
+    display: inline-block; /* Inline-block to display buttons in a single line */
+    margin-bottom: 0; /* Reset margin for inline-block elements */
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-container {
+  width: 310px;
+  display: flex;
+  align-items: center;
+  gap: 0; /* Remove the gap between items */
+}
+
+.input-container input[type="number"] {
+  width: 260px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+}
+
+.aprColler {
+  color: rgb(22, 248, 135);
+}
+
+.tokenBalance {
+  color: #fefefe;
+}
+
+.aprPercent {
+  color: #fefefe;
+}
+
+.button-container {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.processing-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.popup-content a {
+  display: block;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.popup-content a:hover {
+  text-decoration: underline;
+}
