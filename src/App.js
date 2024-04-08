@@ -114,7 +114,7 @@ const App = () => {
       setIsProcessing(true);
       setTransactionLink(`https://explorer.solana.com/tx/${tax_id}?cluster=devnet`);
   
-      const response = await axios.post('https://184.72.67.114:3001/staketoken',data);
+      const response = await axios.post('http://184.72.67.114:3001/staketoken',data);
       console.log('Response status:', response.status);
   
       if (response.status !== 200) {
@@ -146,7 +146,7 @@ const App = () => {
       setIsProcessing(true);
       setTransactionLink(`https://explorer.solana.com/tx/${tax_id}?cluster=devnet`);
   
-      const response = await axios.post('https://184.72.67.114:3001/unstaketoken',data);
+      const response = await axios.post('http://184.72.67.114:3001/unstaketoken',data);
       console.log('Response status:', response.status);
   
       if (response.status !== 200) {
